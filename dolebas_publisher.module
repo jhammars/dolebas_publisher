@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+
+function dolebas_publisher_theme() {
+
+  $theme['publish_button'] = array(
+    'variables' => array(
+      'var1' => NULL,
+    ),
+    'template' => 'publish_button',
+  );
+
+  return $theme;
+
+}

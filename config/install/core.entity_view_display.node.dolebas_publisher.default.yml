@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dolebas_publisher
+  module:
+    - user
+id: node.dolebas_publisher.default
+targetEntityType: node
+bundle: dolebas_publisher
+mode: default
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

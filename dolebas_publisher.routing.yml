@@ -1,0 +1,8 @@
+dolebas_publisher.content:
+  path: '/dolebas_publisher/publish/nid/{parent_nid}'
+  defaults:
+    _controller: 'Drupal\dolebas_publisher\Controller\DolebasPublisherController::content'
+    _title: 'Title'
+    parent_nid: '0'
+  requirements:
+    _permission: 'access content'
