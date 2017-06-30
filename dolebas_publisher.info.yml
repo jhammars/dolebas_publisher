@@ -5,3 +5,4 @@ core: 8.x
 package: Dolebas
 dependencies:
   - dolebas_payments:dolebas_payments
+  - dolebas_uploader:dolebas_uploader

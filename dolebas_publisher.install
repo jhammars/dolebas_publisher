@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Cleans up config entities installed by this module.
+ */
+function dolebas_publisher_uninstall() {
+
+  // Delete dolebas_transaction content type
+  if ( $entity = \Drupal::entityTypeManager()->getStorage('node_type')->load('dolebas_transaction') ) {
+    $entity = \Drupal::entityTypeManager()
+      ->getStorage('node_type')
+      ->load('dolebas_transaction');
+    $entity->delete();
+  }
+
+  // Delete dolebas_publisher content type
+  if ( $entity = \Drupal::entityTypeManager()->getStorage('node_type')->load('dolebas_publisher') ) {
+    $entity = \Drupal::entityTypeManager()
+      ->getStorage('node_type')
+      ->load('dolebas_publisher');
+    $entity->delete();
+  }
+
+  field_purge_batch(100);
+
+}
