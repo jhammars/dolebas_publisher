@@ -1,11 +1,13 @@
 <?php
-/** 
- * @file 
+/**
+ * @file
  * Contains \Drupal\dolebas_publisher\Controller\DolebasPublisherController. 
  */
 namespace Drupal\dolebas_publisher\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\RedirectCommand;
 
 class DolebasPublisherController extends ControllerBase {
 
@@ -15,7 +17,6 @@ class DolebasPublisherController extends ControllerBase {
     // If the node is unpublished
     $parent_node = \Drupal\node\Entity\Node::load($parent_nid);
     if ($parent_node->status->value == 0) {
-
       // Get nid of payment reference child node
       $query = \Drupal::entityQuery('node')
         ->condition('type', 'dolebas_transaction')
@@ -42,29 +43,13 @@ class DolebasPublisherController extends ControllerBase {
                   'type'    => 'dolebas_publisher',  )
         );
         $new_node->save();
+        
+        // Get URL of view and redirect user to that URL.
+        $previous_url= \Drupal::request()->server->get('HTTP_REFERER');
+        $ajax_response = new AjaxResponse();
+        $ajax_response->addCommand(new RedirectCommand($previous_url));
+        return $ajax_response;
 
-        // Redirect to redirection page in order to refresh previous url
-        //$previous_url = 'http://develop.kbox.site/hi/' . $previous_url;
-
-        //$previous_url = bin2hex($previous_url);
-        //$hi_url = 'http://develop.kalabox.site/hi/' . $previous_url;
-        // Redirect to previous Url
-
-//        print '<pre>';print_r($hi_url);exit;
-//        return new \Symfony\Component\HttpFoundation\RedirectResponse('/node');
-
-//        $commands = array();
-//        $commands[] = array('command' => 'reloadPage');
-//        return array('#type' => 'ajax', '#commands' => $commands);
-
-//        $my_url = '/node';
-//        $redir = \Drupal\Core\AjaxRedirectCommand::$my_url;
-//        return $redir;
-
-      // Redirect to previous url
-      // TODO: Check for alternative, HTTP_REFERER is not always reliable
-      $previous_url= \Drupal::request()->server->get('HTTP_REFERER');
-      return new \Symfony\Component\HttpFoundation\RedirectResponse($previous_url);
 
       // If payment status is not "succeeded", return this message
       } else {
