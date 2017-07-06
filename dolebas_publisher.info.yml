@@ -4,5 +4,6 @@ description: Takes care of publishing
 core: 8.x
 package: Dolebas
 dependencies:
+  - eva:eva
   - dolebas_payments:dolebas_payments
   - dolebas_uploader:dolebas_uploader
