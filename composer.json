@@ -1,4 +1,9 @@
 {
     "name": "dolebas/dolebas_publisher",
-    "type": "drupal-custom-module"
+    "type": "drupal-custom-module",
+    "require": {
+        "drupal/eva": "*",
+        "dolebas/dolebas_payments": "*",
+        "dolebas/dolebas_uploader": "*"
+    }
 }
