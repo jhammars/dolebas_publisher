@@ -1,6 +1,7 @@
 {
     "name": "dolebas/dolebas_publisher",
     "type": "drupal-custom-module",
+    "version": "1.0.0-alpha1",
     "require": {
         "drupal/eva": "*",
         "dolebas/dolebas_payments": "*",
