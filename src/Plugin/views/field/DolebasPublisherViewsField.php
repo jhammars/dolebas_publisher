@@ -43,14 +43,23 @@ class DolebasPublisherViewsField extends FieldPluginBase {
     $modal_message_url = Url::fromUserInput($path, $options =
       array('attributes' =>
         array(
-          'class' => 'use-ajax',
-          'data-dialog-type' => "modal"
+          'class' => 'use-ajax publish-progress',
+          'data-dialog-type' => "modal",
+          'onclick' => "displayInprogress()",
+          'id' => 'ajaxProgressLinkText'
         )
       )
     );
 
     // Build link
     $modal_message_link = \Drupal::service('link_generator')->generate('Publish', $modal_message_url);
-    return $modal_message_link;
+    return array(
+      '#markup' => $modal_message_link,
+      '#attached' => array(
+        'library' => array(
+          'dolebas_publisher/publisher-handler'
+        ),
+      )
+    );
   }
 }

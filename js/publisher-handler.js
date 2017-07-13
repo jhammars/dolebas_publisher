@@ -19,5 +19,19 @@
 // })(jQuery, this, Drupal, drupalSettings);
 
 
+//(function($) {
+
 
 //    Drupal.ajax.prototype.commands.reloadPage = function(ajax, rsp, status) {
+
+(function ($, Drupal) {
+    function displayInprogress() {
+        $("#ajaxProgressLinkText").text("Publishing in progress....");
+        console.log("Progress callback");
+        console.log("on click");
+        
+    });    
+})(jQuery, Drupal);
+console.log("Library loaded.");
+
+}
