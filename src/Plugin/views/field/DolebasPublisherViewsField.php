@@ -43,10 +43,9 @@ class DolebasPublisherViewsField extends FieldPluginBase {
     $modal_message_url = Url::fromUserInput($path, $options =
       array('attributes' =>
         array(
-          'class' => 'use-ajax publish-progress',
+          'class' => 'use-ajax',
           'data-dialog-type' => "modal",
-          'onclick' => "displayInprogress()",
-          'id' => 'ajaxProgressLinkText'
+          'onclick' => "myAjax()"
         )
       )
     );

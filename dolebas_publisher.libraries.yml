@@ -1,9 +1,9 @@
 publisher-handler:
-#  header: true
+  header: true
 #  css:
 #    theme:
 #      css/xx-css.css: {}
   js:
     js/publisher-handler.js: {}
-#  dependencies:
-#    - core/drupal.ajax
+  dependencies:
+    - core/drupal.ajax
