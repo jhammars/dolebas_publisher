@@ -22,6 +22,14 @@ function dolebas_publisher_uninstall() {
       ->load('dolebas_publisher');
     $entity->delete();
   }
+  
+  // Delete dolebas_user_email content type
+  if ( $entity = \Drupal::entityTypeManager()->getStorage('node_type')->load('dolebas_user_email') ) {
+    $entity = \Drupal::entityTypeManager()
+      ->getStorage('node_type')
+      ->load('dolebas_user_email');
+    $entity->delete();
+  }
 
   field_purge_batch(100);
 
