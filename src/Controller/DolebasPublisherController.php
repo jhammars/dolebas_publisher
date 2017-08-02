@@ -37,8 +37,10 @@ class DolebasPublisherController extends ControllerBase {
         $parent_node->save();
 
         // Create new unpublished node
+        $uuid = \Drupal::service('uuid')->generate();
         $new_node = \Drupal\node\Entity\Node::create(
-          array(  'title'   => 'Dolebas Parent',
+          array(  'title'   => $uuid,
+                  'uuid'    => $uuid,
                   'status'  => 0,
                   'type'    => 'dolebas_publisher',  )
         );
