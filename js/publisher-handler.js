@@ -3,4 +3,4 @@ function myAjax() {
     console.log("Function called");
 }
 
-console.log("Library loaded.");
+// console.log("Library loaded.");

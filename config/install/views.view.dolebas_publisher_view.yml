@@ -6,7 +6,6 @@ dependencies:
       - dolebas_publisher
   module:
     - dolebas_payments
-    - dolebas_publisher
     - dolebas_uploader
     - eva
     - node

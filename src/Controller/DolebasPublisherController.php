@@ -52,7 +52,6 @@ class DolebasPublisherController extends ControllerBase {
         $ajax_response->addCommand(new RedirectCommand($previous_url));
         return $ajax_response;
 
-
       // If payment status is not "succeeded", return this message
       } else {
         return array(
