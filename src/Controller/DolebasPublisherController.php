@@ -56,7 +56,13 @@ class DolebasPublisherController extends ControllerBase {
       } else {
         return array(
           '#type' => 'markup',
-          '#markup' => $this->t('Payment is required before publishing')
+          '#title' => 'Please click purchase before publishing',
+          '#markup' => $this->t(''),
+          '#attached' => array(
+            'library' => array(
+              'dolebas_publisher/payment-required'
+            ),
+          )
         );
       }
 

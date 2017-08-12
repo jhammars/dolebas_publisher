@@ -4,3 +4,11 @@ publisher-handler:
     js/publisher-handler.js: {}
   dependencies:
     - core/drupal.ajax
+
+payment-required:
+  header: true
+  js:
+    js/payment-required.js: {}
+  dependencies:
+    - core/drupal.ajax    
+ 

@@ -8,7 +8,7 @@ function dolebas_publisher_theme() {
 
   $theme['publish_button'] = array(
     'variables' => array(
-      'var1' => NULL,
+      'myLink' => NULL,
     ),
     'template' => 'publish_button',
   );

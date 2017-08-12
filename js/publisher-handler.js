@@ -1,5 +1,5 @@
 function myAjax() {
-    document.getElementById( "ajax-target" ).innerHTML = "Publishing in progress...";
+    document.getElementById( "publish-ajax-target" ).innerHTML = "Publishing in progress...";
     console.log("Function called");
 }
 

@@ -39,21 +39,11 @@ class DolebasPublisherViewsField extends FieldPluginBase {
 
     // Set path to publish parent node
     $path = '/dolebas_publisher/publish/nid/' . $parent_nid;
-    
-    $modal_message_url = Url::fromUserInput($path, $options =
-      array('attributes' =>
-        array(
-          'class' => 'use-ajax',
-          'data-dialog-type' => "modal",
-          'onclick' => "myAjax()"
-        )
-      )
-    );
 
-    // Build link
-    $modal_message_link = \Drupal::service('link_generator')->generate('Publish', $modal_message_url);
+    // Return html template with library attached
     return array(
-      '#markup' => $modal_message_link,
+      '#theme' => 'publish_button',
+      '#myLink' => $path,
       '#attached' => array(
         'library' => array(
           'dolebas_publisher/publisher-handler'
