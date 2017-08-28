@@ -10,8 +10,6 @@ dependencies:
     - eva
     - node
     - user
-_core:
-  default_config_hash: Qb6RRc-pn9PIwV0SyWOr435_XBDKWAufpcfeb7fqwow
 id: dolebas_publisher_view
 label: 'Dolebas Publisher View'
 module: views

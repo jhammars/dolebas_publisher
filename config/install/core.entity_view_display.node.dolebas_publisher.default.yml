@@ -6,8 +6,6 @@ dependencies:
     - node.type.dolebas_publisher
   module:
     - user
-_core:
-  default_config_hash: umtvzkKoq-M-67ncB0DLFDJKI0OcgU5CHnlMcunhb18
 id: node.dolebas_publisher.default
 targetEntityType: node
 bundle: dolebas_publisher
