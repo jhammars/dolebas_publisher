@@ -17,4 +17,6 @@ toggle-div:
     js/toggle-div.js: {}
   dependencies:
     - core/drupal.ajax
+    - core/jquery
+    - core/jquery.once    
     
