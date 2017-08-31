@@ -1,6 +1,10 @@
-<a href="{{ myLink }}" class="use-ajax" data-dialog-type="modal" onclick="myAjax()">
-    <button id="publishButton" type="button" class="btn">
-        Publish
-    </button>
-</a>    
-<div id="publish-ajax-target"></div>
+<span class="{{ div_uuid }}">
+    <span class="publish-button">
+        <a href="{{ myLink }}" class="use-ajax" data-dialog-type="modal" onclick="myAjax()">
+            <button id="publishButton" type="button" class="btn">
+                Publish
+            </button>
+        </a>    
+        <span id="publish-ajax-target"></span>
+    </span>
+</span>

@@ -2,15 +2,13 @@
 
 /**
  * @file
- * Definition of Drupal\dolebas_publisher\Plugin\views\field\DolebasPublisherViewsField
+ * Definition of Drupal\dolebas_publisher\Plugin\views\field\ToggleDivViewsField
  */
 
 namespace Drupal\dolebas_publisher\Plugin\views\field;
 
 use Drupal\views\Plugin\views\field\FieldPluginBase;
 use Drupal\views\ResultRow;
-use Drupal\Core\Url;
-
 
 
 /**
@@ -18,9 +16,9 @@ use Drupal\Core\Url;
  *
  * @ingroup views_field_handlers
  *
- * @ViewsField("dolebas_publisher")
+ * @ViewsField("dolebas_publisher_toggle_div")
  */
-class DolebasPublisherViewsField extends FieldPluginBase {
+class ToggleDivViewsField extends FieldPluginBase {
 
   /**
    * @{inheritdoc}
@@ -38,18 +36,18 @@ class DolebasPublisherViewsField extends FieldPluginBase {
     $parent_nid = strip_tags($this->view->field['nid']->original_value);
     $div_uuid = strip_tags($this->view->field['uuid']->original_value);
 
-    // Set path to publish parent node
-    $path = '/dolebas_publisher/publish/nid/' . $parent_nid;
-
     // Return html template with library attached
     return array(
-      '#theme' => 'publish_button',
-      '#myLink' => $path,
+      '#theme' => 'toggle_div',
+
       '#div_uuid' => $div_uuid,
       '#attached' => array(
         'library' => array(
-          'dolebas_publisher/publisher-handler'
+          'dolebas_publisher/toggle-div'
         ),
+        'drupalSettings' => array(
+          'div_uuid' => $div_uuid
+        )
       )
     );
   }

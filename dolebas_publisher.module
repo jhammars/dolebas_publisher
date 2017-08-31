@@ -8,9 +8,17 @@ function dolebas_publisher_theme() {
 
   $theme['publish_button'] = array(
     'variables' => array(
+      'div_uuid' => NULL,
       'myLink' => NULL,
     ),
     'template' => 'publish_button',
+  );
+
+  $theme['toggle_div'] = array(
+    'variables' => array(
+      'div_uuid' => NULL
+    ),
+    'template' => 'toggle_div',
   );
 
   return $theme;

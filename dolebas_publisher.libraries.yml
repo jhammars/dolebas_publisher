@@ -12,3 +12,9 @@ payment-required:
   dependencies:
     - core/drupal.ajax    
  
+toggle-div:
+  js:
+    js/toggle-div.js: {}
+  dependencies:
+    - core/drupal.ajax
+    
