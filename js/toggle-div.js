@@ -1,5 +1,3 @@
-console.log("toggle-div library loaded");
-
 jQuery(document).ready(function() {
     jQuery('.' + drupalSettings.div_uuid + ' .publish-button').hide();
     jQuery('.' + drupalSettings.div_uuid + ' .purchase-button').hide();

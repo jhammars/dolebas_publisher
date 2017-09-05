@@ -19,4 +19,5 @@ toggle-div:
     - core/drupal.ajax
     - core/jquery
     - core/jquery.once    
-    
+    - core/drupal
+    - core/drupalSettings    
