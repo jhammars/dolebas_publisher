@@ -48,7 +48,7 @@ class DolebasPublisherViewsField extends FieldPluginBase {
       '#div_uuid' => $div_uuid,
       '#attached' => array(
         'library' => array(
-          'dolebas_publisher/publisher-handler'
+          'dolebas_publisher/publisher-views-field'
         ),
       )
     );

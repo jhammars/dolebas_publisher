@@ -1,5 +1,8 @@
-publisher-handler:
+publisher-views-field:
   header: true
+  css:
+    theme:
+      css/publisher-views-field.css: {}
   js:
     js/publisher-handler.js: {}
   dependencies:
@@ -13,6 +16,9 @@ payment-required:
     - core/drupal.ajax    
  
 toggle-div:
+  css:
+    theme:
+      css/toggle-div.css: {}
   js:
     js/toggle-div.js: {}
   dependencies:
