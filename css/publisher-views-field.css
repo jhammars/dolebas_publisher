@@ -1,14 +1,14 @@
 .publish-button {
-    display: inline-block;
-    position: absolute;
-    right: 20%;
-    top: 50%;
-    transform: translateY(-50%); 
-    z-index: 1;
+  display: inline-block;
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 .dolebas-publisher h2 {
-    display: none;
+  display: none;
 }
 .dolebas-publisher {
-    padding-bottom:30px;
+  padding-bottom: 30px;
 }
